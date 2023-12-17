@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "Type": "House",
+    "Price": 12000,
+    "Name": "Birla House"
+  },
+  {
+    "id": 2,
+    "Type": "Villa",
+    "Price": 13000,
+    "Name": "Erose Villa"
+  },
+  {
+    "id": 3,
+    "Type": "Flat",
+    "Price": 14000,
+    "Name": "Mark Hill"
+  },
+  {
+    "id": 4,
+    "Type": "House",
+    "Price": 15000,
+    "Name": "Swiss House"
+  },
+  {
+    "id": 1,
+    "Type": "House",
+    "Price": 12000,
+    "Name": "Italy House"
+  },
+  {
+    "id": 2,
+    "Type": "House",
+    "Price": 13000,
+    "Name": "Mouse House"
+  },
+  {
+    "id": 3,
+    "Type": "House",
+    "Price": 14000,
+    "Name": "Some house."
+  },
+  {
+    "id": 4,
+    "Type": "House",
+    "Price": 15000,
+    "Name": "Some house."
+  }
+]
