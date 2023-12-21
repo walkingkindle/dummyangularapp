@@ -1,50 +1,66 @@
 [
   {
     "id": 1,
+    "SellRent":2,
     "Type": "House",
     "Price": 12000,
-    "Name": "Birla House"
+    "Name": "Birla House",
+    "Image":"prop-1"
   },
   {
     "id": 2,
+    "SellRent":1,
     "Type": "Villa",
     "Price": 13000,
-    "Name": "Erose Villa"
+    "Name": "Erose Villa",
+    "Image":"prop-2"
   },
   {
     "id": 3,
+    "SellRent":2,
     "Type": "Flat",
     "Price": 14000,
-    "Name": "Mark Hill"
+    "Name": "Mark Hill",
+    "Image":"prop-3"
   },
   {
     "id": 4,
+    "SellRent":1,
     "Type": "House",
     "Price": 15000,
-    "Name": "Swiss House"
+    "Name": "Swiss House",
+    "Image":"prop-4"
   },
-  {
-    "id": 1,
+  { 
+    "id": 5,
+    "SellRent":2,
     "Type": "House",
     "Price": 12000,
-    "Name": "Italy House"
+    "Name": "Italy House",
+    "Image":"prop-5"
   },
   {
-    "id": 2,
+    "id": 6,
+    "SellRent":1,
     "Type": "House",
     "Price": 13000,
-    "Name": "Mouse House"
+    "Name": "Mouse House",
+    "Image":"prop-6"
   },
   {
-    "id": 3,
+    "id": 7,
+    "SellRent":2,
     "Type": "House",
     "Price": 14000,
-    "Name": "Some house."
+    "Name": "Some house.",
+    "Image":"prop-7"
   },
   {
-    "id": 4,
+    "id": 8,
+    "SellRent":1,
     "Type": "House",
     "Price": 15000,
-    "Name": "Some house."
+    "Name": "Some house.",
+    "Image":"prop-8"
   }
 ]
