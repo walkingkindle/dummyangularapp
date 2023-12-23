@@ -5,38 +5,42 @@
       Register
     </div>
     <br class="card-body">
-      <br [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
         <div class="form-group col-12">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control">
+            <label for="userName" class="form-label">Username</label>
+            <input type="text" name="userName" class="form-control" formControlName="userName">
+            <span class="error-block" *ngIf="!userName?.valid && userName?.touched">Please enter a valid name.</span>
         </div>
 
         <div class="form-group col-12">
           <label for="email" class="form-label">Email</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" formControlName="email">
         </div>
 
         <div class="form-group col-12">
-          <label for="passwrod" class="form-label">Password</label>
-          <input type="text" class="form-control">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" formControlName="password">
         </div>
 
         <div class="form-group col-12">
           <label for="cpassword" class="form-label">Confirm Password</label>
-          <input type="text" class="form-control">
+          <input type="password" class="form-control" formControlName="confirmPassword">
+          <span class="error-block" *ngIf="registrationForm.get('password') !== registrationForm.get('confirmPassword') && registrationForm.get('confirmPassword')?.touched">
+          Passwords must match.</span> 
         </div>
 
         <div class="form-group col-12">
           <label for="mobile" class="form-label">Mobile</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" formControlName="mobile">
         </div>
 
         <div class="form-group col-12">
           <button type="submit" class="btn btn-primary">Submit</button>
           <button type="reset" class="btn btn-secondary ml-2">Cancel</button>
         </div>
-        Form Values: {{registrationForm.value}} <br>
+        Form Values: {{registrationForm.value | json}} <br/>
         Form Status: {{registrationForm.valid}}
+        </form>
     </div>
   </div>
   </div>
