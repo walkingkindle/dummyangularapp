@@ -12,6 +12,7 @@ import { PropertyDetailComponent } from './property/property-detail/property-det
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
+import { UserServiceService } from '../services/user-service.service';
 
 
 @Component({
@@ -21,7 +22,8 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers:[
-    HousingService
+    HousingService,
+    UserServiceService
   ]
 })
 export class AppComponent {
