@@ -14,11 +14,31 @@ import { HousingService } from '../housing.service';
 
 export class HomeComponent {
    homeList:Housinglocation[] = []
-   housingService:HousingService = inject(HousingService)
-  constructor(){
-    this.homeList = this.housingService.getAllHousingLocations()
+   filteredHomes:Housinglocation[] = []
+  constructor(private housingService:HousingService){
   }
- 
+
+  ngOnInit(){
+    this.housingService.getAllHousingLocations().subscribe({
+      next:(data) => {
+        this.homeList = data;
+        this.filteredHomes = data;
+        console.log(this.homeList)
+      },
+      error: (error) => {
+        console.error("Error fetching data",error)
+      }
+    })
+  }
+  filterResults(text:string){
+    if(!text){
+      this.filteredHomes = this.homeList;
+    }else{
+      const category:Array<keyof Housinglocation> = []
+      this.filteredHomes = this.homeList.filter((home) => 
+        home?.city.toLowerCase().includes(text.toLowerCase())
+       )
+    }
+  }
 
 }
-

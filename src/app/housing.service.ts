@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Housinglocation } from './housinglocation';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -112,12 +113,18 @@ export class HousingService {
     }
   ];
   
-  getAllHousingLocations():Housinglocation[]{
-    return this.homeList
+  getAllHousingLocations():Observable<Housinglocation[]>{
+    return of(this.homeList)
   }
 
   getHousingLocationById(id:number):Housinglocation | undefined{
     return this.homeList.find((home) =>
     home.id === id)
+  }
+
+  submitApplication(firstName:string, lastName:string, email:string){
+    console.log(
+      `Home application received firstname: ${firstName}, lastname: ${lastName}, email: ${email}`
+    )
   }
 }
