@@ -19,16 +19,10 @@ export class HomeComponent {
   }
 
   ngOnInit(){
-    this.housingService.getAllHousingLocations().subscribe({
-      next:(data) => {
-        this.homeList = data;
-        this.filteredHomes = data;
-        console.log(this.homeList)
-      },
-      error: (error) => {
-        console.error("Error fetching data",error)
-      }
-    })
+   this.housingService.getAllHousingLocations().then((homeList:Housinglocation[]) =>{
+    this.homeList = homeList;
+    this.filteredHomes = homeList;
+   }) 
   }
   filterResults(text:string){
     if(!text){

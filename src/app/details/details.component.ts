@@ -22,8 +22,10 @@ export class DetailsComponent {
     email: new FormControl('')
    })
    constructor(){
-    this.homeId = Number(this.route.snapshot.params['id'])
-    this.home = this.housingService.getHousingLocationById(this.homeId);
+    const homeId = parseInt(this.route.snapshot.params['id'],10)
+    this.housingService.getHousingLocationById(homeId).then((home) => {
+      this.home = home;
+    })
    }
 
    ngOnInit(){
